@@ -3,14 +3,22 @@ name = "llm-zoomcamp"
 version = "0.1.0"
 description = "LLM Zoomcamp teaches you how to build practical, production-ready LLM applications step by step"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "gitsource>=0.0.5",
     "jupyter>=1.1.1",
     "minsearch>=0.1.0",
+    "numpy<2",
     "openai>=2.43.0",
+    "psycopg[binary]>=3.3.4",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
+    "sentence-transformers==5.1.2",
     "sqlitesearch>=0.1.1",
     "toyaikit>=0.0.11",
+]
+
+[tool.uv]
+required-environments = [
+    "sys_platform == 'darwin' and platform_machine == 'x86_64'",
 ]
